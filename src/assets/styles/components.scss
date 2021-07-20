@@ -65,3 +65,45 @@ a {
 		}
 	}
 }
+
+$top-nav-height: 3rem;
+
+.top-nav-height {
+	height: $top-nav-height;
+}
+
+.top-nav-height-width {
+	width: $top-nav-height;
+}
+
+.full-minus-nav {
+	height: calc(100vh - #{$top-nav-height});
+}
+
+.min-h-full-minus-nav {
+	min-height: calc(100vh - #{$top-nav-height});
+}
+
+//override the default focus styles of browsers
+
+*:focus-visible {
+	outline: none;
+	-moz-outline: none;
+}
+
+.input-outline:focus-visible {
+	@apply border-btnBlue p-1 border rounded-sm;
+}
+
+//styles for inputs
+.input-border-error {
+	@apply border-cmsErrorRed;
+}
+
+.input-border {
+	@apply border-2 rounded-sm focus:border-cmsBtnColor;
+}
+
+.input-readonly {
+	@apply pointer-events-none;
+}

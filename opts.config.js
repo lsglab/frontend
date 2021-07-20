@@ -72,9 +72,7 @@ const preprocessConfig = (dev) => ({
 });
 const terserConfig = () => ({
 	compress: {
-		booleans_as_integers: true,
 		defaults: true,
-		drop_console: true,
 		hoist_funs: true,
 		hoist_vars: true,
 		keep_fargs: false,
@@ -91,6 +89,7 @@ const terserConfig = () => ({
 		indent_level: 0,
 		webkit: true,
 	},
+	keep_classnames: true,
 	mangle: {
 		toplevel: true,
 	},
